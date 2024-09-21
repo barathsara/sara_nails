@@ -1,20 +1,71 @@
+html, body {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+}
+
 body {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-#gallery {
+main {
+    flex: 1; /* Allow the main content area to grow and fill available space */
+}
+
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
     flex-wrap: wrap;
+}
+
+.nav-links {
+    padding-right: 10px;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
     justify-content: center;
-    padding: 10px;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
 img {
     max-width: 100%;
     height: auto;
-    margin: 10px;
 }
 
 #image-api img {
@@ -22,10 +73,9 @@ img {
     height: 40px;
     object-fit: cover;
     border-radius: 40px;
-    margin: 10px;
     border: 1px solid #98908e;
+    margin: 10px;
 }
-
 
 h1, h2, h3 {
     text-align: center;
