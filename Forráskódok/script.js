@@ -1,4 +1,4 @@
-const accessKey = 'SX0J1npNbru3nNSIKnZ9jPiuAMArX_4Wzb3wWTx0yqw';  // Replace with your Unsplash API key
+const accessKey = 'SX0J1npNbru3nNSIKnZ9jPiuAMArX_4Wzb3wWTx0yqw';
 
 async function fetchImages(query) {
   try {
@@ -10,8 +10,7 @@ async function fetchImages(query) {
     });
 
     if (response.data.results.length > 0) {
-      // Assume you want to display the first image
-      const indexToDisplay = 0; // Change this index to select a different image
+      const indexToDisplay = 0;
       displayImage(response.data.results[indexToDisplay]);
     } else {
       console.log('No images found for the given query.');
@@ -24,12 +23,23 @@ async function fetchImages(query) {
 
 function displayImage(image) {
   const container = document.getElementById('image-api');
-  container.innerHTML = ''; // Clear any previous images
+  container.innerHTML = '';
   
   const imgElement = document.createElement('img');
-  imgElement.src = image.urls.small; // Use small size image for display
+  imgElement.src = image.urls.small;
   imgElement.alt = image.description || 'Unsplash Image';
   container.appendChild(imgElement);
 }
 
 fetchImages('nail salon');
+
+
+//legördülő navbar
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
