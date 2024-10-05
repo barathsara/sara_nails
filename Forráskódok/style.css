@@ -34,7 +34,25 @@ main {
 .nav-links {
     list-style: none;
     display: flex;
+    background-color: #e7e2cf;
+    justify-content: space-between; /* This should handle spacing */
+    align-items: center;
+    width: 100%; /* Ensure it stretches across available space */
+    padding: 0 20px; /* Add some padding if needed */
+}
 
+.nav-links li {
+    margin: 0;
+    padding: 0;
+    flex: 1; /* This will distribute space evenly between items */
+    text-align: center; /* Optional: Center-align the text */
+}
+
+.nav-links a {
+    font-size: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    text-decoration: none;
+    color: #e796a5;
 }
 
 .hamburger {
@@ -56,7 +74,6 @@ main {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #e7e2cf;
         position: absolute;
         padding-left: 10px;
         top: 0;
@@ -79,10 +96,7 @@ main {
     }
 
     .nav-links a {
-        font-size: 1rem;
-        font-family: "Bebas Neue", sans-serif;
-        text-decoration: none;
-        color: #e796a5;
+        font-size: 15px;
     }
 
     .hamburger {
@@ -170,6 +184,12 @@ img {
     margin: 0 auto;
 }
 
+.image-container {
+    position: relative;
+    max-width: 150px;
+    width: 100%;
+}
+
 .intro-image {
     width: 100%;
     max-width: 150px;
@@ -204,9 +224,11 @@ p {
     background-size: cover;
     background-position: center;
     text-align: center;
-    font-size: larger;
-    font-style: bold;
     padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;         
 }
 
 
@@ -221,7 +243,7 @@ p {
 }
 
 .hero-content p {
-    font-size: 30px;
+    font-size: 25px;
     font-style:oblique;
 }
 
@@ -234,7 +256,6 @@ p {
     margin-top: 20px;
     display: inline-block;    
     font-family: "Bebas Neue", sans-serif;
-
 }
 
 .cta-button:hover {
@@ -252,7 +273,7 @@ p {
 .image-grid {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
 }
 
@@ -266,12 +287,6 @@ p {
     object-fit: cover;
 }
 
-@media (max-width: 768px) {
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 .services {
     margin-top: 100px;
     text-align: center;
@@ -282,9 +297,8 @@ p {
     font-family: "Bebas Neue", sans-serif;
     font-size: 40px;
     text-align: center;
-    width: 100%; /* Ensure full width */
-    margin: 0 auto; /* Centering horizontally */
-    display: block; /* Ensures it's a block-level element */
+    width: 100%;
+    display: block;
 }
 
 
@@ -292,8 +306,7 @@ p {
     margin-top: 100px;
     gap: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 100px;
     margin-left: 20px;
     margin-right: 20px;
@@ -302,28 +315,25 @@ p {
 
 .service-item {
     width: 100%;
-    max-width: 200px;
+    max-width: 160px;
     padding: 20px;
-    background-color: #e796a5; /*#c9abac*/
+    background-color: #e796a5;
     color: black;
     border: 1px solid ;
     border-radius: 10px;
 }
 
 .contact {
-    padding: 50px 20px;
+    margin: 20px;
     text-align: center;
     font-size: 16px;
 }
 
 .contact h2{
+    color: #e796a5;
+    margin-top: 100px;
     font-family: "Bebas Neue", sans-serif;
     font-size: 40px;
-}
-
-.contact button{
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
 }
 
 .contact form {
@@ -337,17 +347,19 @@ p {
 .contact input, .contact textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #e796a5;
     border-radius: 5px;
 }
 
 .contact button {
-    background-color: #ff69b4;
+    background-color: #e796a5;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
 }
 
 .contact button:hover {
