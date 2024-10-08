@@ -220,7 +220,7 @@ p {
 }
 
 .hero {
-    background-image: url('../images/bg/blurbg.jpg');
+    background-image: url('./blurbg.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
